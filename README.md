@@ -2,7 +2,7 @@
 
 `codeexplain.nvim` is a Neovim plugin that uses the powerful [GPT4ALL](https://gpt4all.io/) language model to provide on-the-fly, line-by-line explanations and potential security vulnerabilities for selected code directly in your Neovim editor. It's like having your personal code assistant right inside your editor without leaking your codebase to any company.
 
-![Demo](https://github.com/mthbernardes/codeexplain.nvim/assets/12648924/734f1687-d506-4b0b-9dd0-6e9232284e09)
+![Demo](https://github.com/SingularisArt/codeexplain.nvim/assets/12648924/734f1687-d506-4b0b-9dd0-6e9232284e09)
 
 ## Features
 
@@ -33,8 +33,8 @@ pip install -r langchain==0.0.177 llama-cpp-python==0.1.48 Pygments==2.15.1 pynv
 Before installing the plugin, download the GPT4ALL model and save it in your home directory:
 
 ```bash
-mkdir -p "$HOME/.codeexplain/"
-curl -o "$HOME/.codeexplain/model.bin" https://gpt4all.io/models/ggml-vicuna-7b-1.1-q4_2.bin
+mkdir -p "$HOME/.config/codeexplain/"
+curl -o "$HOME/.config/codeexplain/model.bin" https://gpt4all.io/models/ggml-vicuna-7b-1.1-q4_2.bin
 ```
 
 ### vim-plug
@@ -42,7 +42,7 @@ curl -o "$HOME/.codeexplain/model.bin" https://gpt4all.io/models/ggml-vicuna-7b-
 Add the following line to your `init.vim`:
 
 ```vim
-Plug 'mthbernardes/codeexplain.nvim'
+Plug 'SingularisArt/codeexplain.nvim'
 ```
 
 Then run the following commands in your Neovim editor:
@@ -57,7 +57,7 @@ Then run the following commands in your Neovim editor:
 Add the following to your `plugins.lua` file:
 
 ```lua
-use 'mthbernardes/codeexplain.nvim'
+use 'SingularisArt/codeexplain.nvim'
 ```
 
 Then run `PackerSync` in your Neovim editor.
@@ -66,7 +66,7 @@ Then run `PackerSync` in your Neovim editor.
 
 ```lua
 {
-  "mthbernardes/codeexplain.nvim",
+  "SingularisArt/codeexplain.nvim",
   lazy = true,
   cmd = "CodeExplain",
   build = function()
